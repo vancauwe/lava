@@ -8,6 +8,9 @@ on:
 jobs:
   web:
     runs-on: ubuntu-latest
+    env:
+      # Needed at `svelte-kit sync` / check time so `$env/static/public` exports it
+      PUBLIC_KIT_FORM_ACTION: ${{ vars.PUBLIC_KIT_FORM_ACTION }}
     steps:
       - uses: actions/checkout@v4
 
@@ -28,5 +31,4 @@ jobs:
       - name: Build
         env:
           BASE_PATH: /${{ github.event.repository.name }}
-          PUBLIC_KIT_FORM_ACTION: ${{ vars.PUBLIC_KIT_FORM_ACTION }}
         run: npm run build
