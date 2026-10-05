@@ -28,7 +28,7 @@
 		<button type="submit">Subscribe</button>
 	</form>
 {:else}
-	<form class="form" aria-describedby="newsletter-hint">
+	<form class="form">
 		<label>
 			<span>Name</span>
 			<input type="text" name="fields[first_name]" disabled placeholder="Optional" />
@@ -38,11 +38,6 @@
 			<input type="email" name="email_address" disabled required placeholder="you@example.com" />
 		</label>
 		<button type="submit" disabled>Subscribe</button>
-		<p id="newsletter-hint" class="hint serif">
-			Connect Kit via <code class="mono">PUBLIC_KIT_FORM_ACTION</code> (form embed
-			<code class="mono">action</code> URL). In Kit, set the post-subscribe redirect to
-			<code class="mono">/newsletter/thanks/</code> and disable double opt-in.
-		</p>
 	</form>
 {/if}
 
@@ -103,16 +98,5 @@
 	button:disabled {
 		opacity: 0.65;
 		cursor: not-allowed;
-	}
-
-	.hint {
-		margin: 0;
-		color: var(--op-text-muted);
-		font-size: 1.15rem;
-		line-height: 1.4;
-	}
-
-	code {
-		font-size: 0.8em;
 	}
 </style>

@@ -10,7 +10,7 @@
 	<header>
 		<h1>Newsletter</h1>
 		<p class="serif">
-			Studio notes, new series, and occasional invitations — quiet inbox, no noise.
+			Sign up to hear when a new series is completed or a new exposition opens.
 		</p>
 	</header>
 	<NewsletterForm />
