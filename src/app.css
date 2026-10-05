@@ -1,0 +1,193 @@
+/* Copied from .agents/skills/lava-theme/assets/tokens.css — keep in sync */
+
+:root {
+	--op-font-heading: 'Space Grotesk', system-ui, sans-serif;
+	--op-font-body: 'Space Grotesk', system-ui, sans-serif;
+	--op-font-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', monospace;
+	--op-font-accent: 'Instrument Serif', 'Times New Roman', serif;
+
+	--op-bg: #f7f4f1;
+	--op-surface: #fffbf8;
+	--op-surface-2: #efeae4;
+	--op-surface-active: #e7e0d8;
+	--op-border: #d9d0c6;
+	--op-border-subtle: #ebe4dc;
+
+	--op-blue-darker: #2d2a32;
+	--op-blue-dark: #6b5f7a;
+	--op-blue-mid: #9a88b8;
+	--op-blue: #c9b8e8;
+	--op-blue-light: #f5b5a8;
+	--op-blue-pale: #b8d4c8;
+
+	--op-text: #2d2a32;
+	--op-text-2: #4a4550;
+	--op-text-muted: #6e6874;
+	--op-text-faint: #9a94a0;
+	--op-text-on-blue: #2d2a32;
+
+	--op-success: #7a9e8c;
+	--op-error: #c47878;
+	--op-warning: #c4a574;
+	--op-info: #8aa0b8;
+
+	--op-footer-bg: #efeae4;
+	--op-footer-border: #d9d0c6;
+
+	--op-wash: linear-gradient(145deg, #f7f4f1 0%, #efe8f4 38%, #f8ebe6 68%, #eaf2ee 100%);
+	--series-a: #efeae4;
+	--op-frame: #111111;
+	--op-radius: 0;
+	--op-space-xs: 0.35rem;
+	--op-space-sm: 0.75rem;
+	--op-space-md: 1.25rem;
+	--op-space-lg: 2.5rem;
+	--op-space-xl: 4.5rem;
+	--op-space-2xl: 7rem;
+	--op-max: 68rem;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	min-height: 100dvh;
+	font-family: var(--op-font-body);
+	font-weight: 400;
+	font-size: 1.05rem;
+	line-height: 1.55;
+	color: var(--op-text);
+	background-color: var(--op-bg);
+	background-image: var(--op-wash);
+	background-attachment: fixed;
+	-webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: var(--op-font-heading);
+	font-weight: 500;
+	letter-spacing: -0.03em;
+	line-height: 1.1;
+	margin: 0;
+}
+
+a {
+	color: inherit;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 0.22em;
+	transition:
+		color 180ms ease,
+		text-decoration-color 180ms ease;
+}
+
+a:hover {
+	color: var(--op-blue-dark);
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+button,
+input,
+textarea {
+	font: inherit;
+}
+
+.serif {
+	font-family: var(--op-font-accent);
+	font-weight: 400;
+	letter-spacing: 0.01em;
+}
+
+.mono {
+	font-family: var(--op-font-mono);
+}
+
+.site-shell {
+	min-height: 100dvh;
+	display: flex;
+	flex-direction: column;
+}
+
+.site-main {
+	flex: 1;
+	width: min(100% - 2.5rem, var(--op-max));
+	margin-inline: auto;
+	padding-block: var(--op-space-lg) var(--op-space-2xl);
+}
+
+/* Series detail pages only — one pastel fading to white */
+.series-theme {
+	background-image: linear-gradient(180deg, var(--series-a) 0%, var(--op-surface) 100%);
+	margin-inline: calc(50% - 50vw);
+	width: 100vw;
+	padding-inline: max(1.25rem, calc((100vw - var(--op-max)) / 2));
+	padding-block: var(--op-space-lg) var(--op-space-xl);
+	box-sizing: border-box;
+}
+
+.series-theme.theme-connections {
+	--series-a: #c5ddd6;
+}
+
+.series-theme.theme-because-i-could-not-stop-for-death {
+	--series-a: #d5dcc8;
+}
+
+.series-theme.theme-l-hirondelle {
+	--series-a: #f0d5cc;
+}
+
+.series-theme.theme-les-colchiques {
+	/* Soft blue pastel wash */
+	--series-a: #c4d4e6;
+}
+
+.series-theme.theme-one-art {
+	--series-a: #edcfd8;
+}
+
+@keyframes fade-up {
+	from {
+		opacity: 0;
+		transform: translateY(0.85rem);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes wash-drift {
+	0%,
+	100% {
+		background-position: 0% 40%;
+	}
+	50% {
+		background-position: 100% 60%;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}

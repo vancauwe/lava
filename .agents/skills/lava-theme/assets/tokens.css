@@ -1,0 +1,56 @@
+/* LAVA sober pastels — source of truth for design values.
+   App stylesheet copies these into :root (frontend-dev §2). */
+
+:root {
+	/* Fonts */
+	--op-font-heading: 'Space Grotesk', system-ui, sans-serif;
+	--op-font-body: 'Space Grotesk', system-ui, sans-serif;
+	--op-font-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', monospace;
+	--op-font-accent: 'Instrument Serif', 'Times New Roman', serif;
+
+	/* Surfaces — paper gallery wall */
+	--op-bg: #f7f4f1;
+	--op-surface: #fffbf8;
+	--op-surface-2: #efeae4;
+	--op-surface-active: #e7e0d8;
+	--op-border: #d9d0c6;
+	--op-border-subtle: #ebe4dc;
+
+	/* Brand accents (pastel slots; --op-blue-* names are the contract) */
+	--op-blue-darker: #2d2a32;
+	--op-blue-dark: #6b5f7a;
+	--op-blue-mid: #9a88b8;
+	--op-blue: #c9b8e8; /* lilac — primary accent */
+	--op-blue-light: #f5b5a8; /* blush */
+	--op-blue-pale: #b8d4c8; /* sage */
+
+	/* Text */
+	--op-text: #2d2a32;
+	--op-text-2: #4a4550;
+	--op-text-muted: #6e6874;
+	--op-text-faint: #9a94a0;
+	--op-text-on-blue: #2d2a32;
+
+	/* Status */
+	--op-success: #7a9e8c;
+	--op-error: #c47878;
+	--op-warning: #c4a574;
+	--op-info: #8aa0b8;
+
+	/* Footer */
+	--op-footer-bg: #efeae4;
+	--op-footer-border: #d9d0c6;
+
+	/* LAVA extras (beyond contract) */
+	--op-wash: linear-gradient(145deg, #f7f4f1 0%, #efe8f4 38%, #f8ebe6 68%, #eaf2ee 100%);
+	--series-a: #efeae4;
+	--op-frame: #111111;
+	--op-radius: 0;
+	--op-space-xs: 0.35rem;
+	--op-space-sm: 0.75rem;
+	--op-space-md: 1.25rem;
+	--op-space-lg: 2.5rem;
+	--op-space-xl: 4.5rem;
+	--op-space-2xl: 7rem;
+	--op-max: 68rem;
+}
