@@ -9,9 +9,7 @@
 <section class="page">
 	<header>
 		<h1>Newsletter</h1>
-		<p class="serif">
-			Sign up to hear when a new series is completed or a new exposition opens.
-		</p>
+		<p class="serif">Sign up to hear when a new series is completed or a new exposition opens.</p>
 	</header>
 	<NewsletterForm />
 </section>
