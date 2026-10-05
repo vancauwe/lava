@@ -2,10 +2,9 @@
 
 ## Design system
 
-- **Engineering:** `.agents/skills/frontend-dev` (`--op-*` token contract, font loading, no raw hex in markup)
+- **Engineering:** `.agents/skills/frontend-dev` (`--op-*` token contract, font loading, no raw hex in markup) — from [Open Pulse](https://openpulse.science) / [open-pulse-webkit](https://github.com/sdsc-ordes/open-pulse-webkit)
 - **Active design skill:** `lava-theme` (sober pastels, Space Grotesk + Instrument Serif)
-
-Open Pulse product chrome (attribution bar, provenance cards) does **not** apply here — this is an artistic portfolio, not an Open Pulse dashboard. Keep the engineering contract; skip those two product components.
+- **CI / deploy:** GitHub Actions patterns adapted from Open Pulse webkit (lint, check, build, Pages deploy)
 
 ## Stack
 
