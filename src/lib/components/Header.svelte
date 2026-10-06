@@ -3,7 +3,6 @@
 	import { page } from '$app/state';
 
 	const links = [
-		{ href: '/', label: 'Home', match: (id: string | null) => id === '/' },
 		{
 			href: '/series',
 			label: 'Series',

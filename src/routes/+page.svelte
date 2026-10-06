@@ -14,7 +14,7 @@
 		<h1>LAVA</h1>
 		<p class="lede serif">Soft colors, loud images.</p>
 		<div class="ctas">
-			<p class="stay">Stay up to date with us</p>
+			<p class="stay">Stay up to date with me</p>
 			<a class="newsletter" href={resolve('/newsletter')}>Newsletter</a>
 		</div>
 	</div>
@@ -239,46 +239,7 @@
 		}
 
 		.mosaic {
-			order: -1;
-			height: 13.5rem;
-			min-height: 13.5rem;
-			max-width: 22rem;
-			margin-inline: auto;
-		}
-
-		.tile-1 {
-			top: 8%;
-			left: 4%;
-			width: 4.5rem;
-			height: 4.5rem;
-		}
-
-		.tile-2 {
-			top: 0;
-			right: 10%;
-			width: 3.75rem;
-			height: 3.75rem;
-		}
-
-		.tile-3 {
-			top: 28%;
-			left: 36%;
-			width: 5.75rem;
-			height: 5.75rem;
-		}
-
-		.tile-4 {
-			bottom: 10%;
-			left: 8%;
-			width: 4rem;
-			height: 4rem;
-		}
-
-		.tile-5 {
-			bottom: 4%;
-			right: 6%;
-			width: 5rem;
-			height: 5rem;
+			display: none;
 		}
 	}
 </style>
