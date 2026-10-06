@@ -36,7 +36,8 @@ stylesheet `:root`. Never put raw hex in component markup — use `var(--op-*)`.
 
 - **Art Series** — blue / green pastels only (`mist` → `--op-info`, `sage` → `--op-blue-pale`)
 - **Expositions** — orange / violet pastels only (`blush` → `--op-blue-light`, `lilac` → `--op-blue`)
-- Landing CTAs: Art Series = sage green; Expositions = lilac purple
+- Landing CTA: plain “Stay up to date with us” + lilac Newsletter button
+- Landing mosaic: ≤5 series extracts, asymmetrical scatter to the right of LAVA; fixed tile sizes (no full-bleed stretch on phone)
 - **Series extracts** — small equal square frames, `--op-frame` black border, centered triptych
 - **Series detail wash** — one pastel (`--series-a`) fading to white (`--op-surface`):
   - Connections: seafoam

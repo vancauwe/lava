@@ -71,9 +71,9 @@
 
 	a {
 		display: grid;
-		grid-template-columns: minmax(5rem, 9rem) 1fr;
+		grid-template-columns: 7.5rem 1fr;
 		gap: var(--op-space-md);
-		align-items: stretch;
+		align-items: center;
 		text-decoration: none;
 		padding-block: var(--op-space-md);
 		border-top: 1px solid var(--op-border-subtle);
@@ -86,14 +86,14 @@
 	.thumb,
 	.swatch {
 		display: block;
-		width: 100%;
-		min-height: 6.5rem;
-		height: 100%;
+		width: 7.5rem;
+		height: 7.5rem;
 		object-fit: cover;
 		object-position: center;
 		border: 1px solid var(--op-border-subtle);
 		box-sizing: border-box;
 		background: var(--op-surface-2);
+		flex-shrink: 0;
 	}
 
 	.swatch {
@@ -140,12 +140,14 @@
 
 	@media (max-width: 560px) {
 		a {
-			grid-template-columns: 1fr;
+			grid-template-columns: 5.5rem 1fr;
+			gap: var(--op-space-sm);
 		}
 
 		.thumb,
 		.swatch {
-			min-height: 4.5rem;
+			width: 5.5rem;
+			height: 5.5rem;
 		}
 	}
 </style>
