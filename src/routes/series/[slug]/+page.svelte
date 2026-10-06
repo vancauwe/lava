@@ -67,14 +67,45 @@
 			<div class="field" aria-hidden="true"></div>
 		{/if}
 
-		{#if series.works?.length}
+		{#if series.works?.length && series.poem}
+			<section class="associations" aria-labelledby="works-title">
+				<div class="assoc-head">
+					<h2 id="works-title">Compositions</h2>
+					<h2 id="poem-title">{series.poem.title}</h2>
+				</div>
+				<ol>
+					{#each series.works as work, i (work.title)}
+						<li>
+							<div class="assoc-left">
+								<p class="work-head">
+									<span class="work-label">
+										<span class="work-num" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span
+										>
+										<span class="work-title">{work.title}</span>
+									</span>
+									<span class="work-year">{work.year}</span>
+								</p>
+							</div>
+							<p class="assoc-right work-lines serif">
+								{#each work.lines as line, j (j)}
+									{line}{#if j < work.lines.length - 1}<br />{/if}
+								{/each}
+							</p>
+						</li>
+					{/each}
+				</ol>
+			</section>
+		{:else if series.works?.length}
 			<section class="works" aria-labelledby="works-title">
 				<h2 id="works-title">Compositions</h2>
 				<ol>
-					{#each series.works as work (work.title)}
+					{#each series.works as work, i (work.title)}
 						<li>
 							<p class="work-head">
-								<span class="work-title">{work.title}</span>
+								<span class="work-label">
+									<span class="work-num" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+									<span class="work-title">{work.title}</span>
+								</span>
 								<span class="work-year">{work.year}</span>
 							</p>
 							<p class="work-lines serif">
@@ -222,6 +253,44 @@
 		box-sizing: border-box;
 	}
 
+	.associations {
+		display: grid;
+		gap: var(--op-space-md);
+	}
+
+	.assoc-head {
+		display: grid;
+		grid-template-columns: minmax(8rem, 0.85fr) minmax(0, 1.25fr);
+		gap: var(--op-space-lg);
+		align-items: baseline;
+	}
+
+	.associations ol {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: grid;
+		gap: 0;
+		border-top: 1px solid var(--op-border);
+	}
+
+	.associations li {
+		display: grid;
+		grid-template-columns: minmax(8rem, 0.85fr) minmax(0, 1.25fr);
+		gap: var(--op-space-lg);
+		align-items: start;
+		padding-block: var(--op-space-md);
+		border-bottom: 1px solid var(--op-border-subtle);
+	}
+
+	.assoc-left {
+		min-width: 0;
+	}
+
+	.assoc-right {
+		min-width: 0;
+	}
+
 	.works ol {
 		list-style: none;
 		margin: 0;
@@ -247,9 +316,34 @@
 		align-items: baseline;
 	}
 
+	.assoc-left .work-head {
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
+		gap: 0.25rem;
+	}
+
+	.work-label {
+		display: inline-flex;
+		align-items: baseline;
+		gap: 0.55rem;
+		min-width: 0;
+	}
+
+	.work-num {
+		font-family: var(--op-font-heading);
+		font-size: 0.7rem;
+		font-weight: 500;
+		letter-spacing: 0.16em;
+		color: var(--op-text);
+		font-variant-numeric: tabular-nums;
+		flex-shrink: 0;
+	}
+
 	.work-title {
 		font-family: var(--op-font-heading);
 		font-size: 1.2rem;
+		color: var(--op-text);
 	}
 
 	.work-year {
@@ -288,6 +382,14 @@
 		font-size: 1.2rem;
 		line-height: 1.5;
 		color: var(--op-text-2);
+	}
+
+	@media (max-width: 640px) {
+		.assoc-head,
+		.associations li {
+			grid-template-columns: 1fr;
+			gap: var(--op-space-xs);
+		}
 	}
 
 	.field {
