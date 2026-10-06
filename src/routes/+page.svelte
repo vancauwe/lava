@@ -12,7 +12,7 @@
 	<div class="copy">
 		<p class="eyebrow serif">Artistic portfolio</p>
 		<h1>LAVA</h1>
-		<p class="lede serif">Colour-led work in series — soft frames, loud images.</p>
+		<p class="lede serif">Soft colors, loud images.</p>
 		<div class="ctas">
 			<p class="stay">Stay up to date with us</p>
 			<a class="newsletter" href={resolve('/newsletter')}>Newsletter</a>
